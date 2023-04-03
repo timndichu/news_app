@@ -1,5 +1,6 @@
 part of 'explore_news_bloc.dart';
 
+// This is the event for the explore news
 abstract class ExploreNewsEvent extends Equatable {
   const ExploreNewsEvent();
 
@@ -7,6 +8,7 @@ abstract class ExploreNewsEvent extends Equatable {
   List<Object> get props => [];
 }
 
+// This is the event for the searching news
 class ExploreSearchNews extends ExploreNewsEvent {
   final String query;
 
@@ -21,6 +23,7 @@ class ExploreSearchNews extends ExploreNewsEvent {
   List<Object> get props => [query, page];
 }
 
+// This is the event for the searching/loading more news
 class ExploreSearchNewsMore extends ExploreNewsEvent {
   const ExploreSearchNewsMore();
   @override

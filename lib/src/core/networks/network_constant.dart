@@ -1,3 +1,5 @@
+// Constants
+
 const hostUrl = "newsapi.org";
 const rootUrl = "https://newsapi.org/v2/";
 

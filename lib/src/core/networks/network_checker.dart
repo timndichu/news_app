@@ -8,6 +8,7 @@ abstract class NetworkChecher {
   Future<bool> hasConnection();
 }
 
+// This is the implementation of the network checker
 class NetworkCheckerImpl implements NetworkChecher {
   final ConnectivityResult result = ConnectivityResult.none;
   @override

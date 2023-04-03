@@ -28,6 +28,7 @@ class _SearchNewsViewState extends State<SearchNewsView> {
   void initState() {
     scrollController = ScrollController();
     textEditingController = TextEditingController();
+    // This is to load more news when the user scroll to the end of the list
     scrollController.addListener(() {
       if (scrollController.offset >=
           scrollController.position.maxScrollExtent) {
@@ -131,6 +132,7 @@ class _SearchNewsViewState extends State<SearchNewsView> {
                 // stops: [],
               ),
             ),
+            // This is to show the loading skeleton
             child: BlocBuilder<ExploreNewsBloc, ExploreNewsState>(
               builder: (_, state) {
                 if (state.status == ExploreBlocStatus.loading) {

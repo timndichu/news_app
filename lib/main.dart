@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     setStatusBar();
+    // Provide the Bloc to the MaterialApp
     return BlocProvider<ThemeModeBloc>(
       create: (_) => sl<ThemeModeBloc>()..add(const ReadThemeModeEvent()),
       child: BlocBuilder<ThemeModeBloc, ThemeModeState>(
@@ -51,6 +52,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// This class is used to remove the glow effect when scrolling
 class MyBehavior extends ScrollBehavior {
   @override
   Widget buildOverscrollIndicator(

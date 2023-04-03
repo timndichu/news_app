@@ -3,7 +3,9 @@ import 'package:dio/dio.dart';
 import '../../../core/core.dart';
 import '../../models/news_model.dart';
 
+// This is the abstract class for the remote data source
 abstract class NewsRemoteDataSource {
+  // This method is used to get the news from the API
   Future<NewsModel> getNewGlobal({
     required bool isHeadlines,
     String? category,
@@ -13,6 +15,7 @@ abstract class NewsRemoteDataSource {
   });
 }
 
+// This is the implementation of the remote data source
 class NewsRemoteDataSourceImpl implements NewsRemoteDataSource {
   final NetworkContainer http;
 

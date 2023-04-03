@@ -13,6 +13,7 @@ abstract class NetworkContainer {
   });
 }
 
+//  This is the implementation of the network container
 class NetworkContainerImpl implements NetworkContainer {
   final Dio dio;
   NetworkContainerImpl({required this.dio});
@@ -24,6 +25,7 @@ class NetworkContainerImpl implements NetworkContainer {
   }) =>
       _requestMethod(path: path, methodType: methodType);
 
+  // This method is used to make the requests
   Future<Response> _requestMethod({
     required String path,
     required MethodType methodType,

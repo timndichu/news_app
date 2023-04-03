@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../injector.dart';
 import '../core.dart';
 
+// This is the helper class for the navigator
 class NavigatorHelper {
   GlobalKey<NavigatorState> kNavKey = GlobalKey<NavigatorState>();
   GlobalKey<ScaffoldMessengerState> kscaffoldMessengerKey =
@@ -34,6 +35,7 @@ class NavigatorHelper {
   }
 }
 
+// This is the helper class for the app
 class Guide {
   static void back() {
     return sl<NavigatorHelper>().pop();
@@ -57,6 +59,7 @@ class Guide {
     return sl<NavigatorHelper>().snackBar(snack);
   }
 
+  // When we want to show a snackbar with a message
   static String failureToMessage(Failure failure) {
     if (failure is NetworkFailure) {
       return ResponseException.getErrorMessage(failure.responseException);

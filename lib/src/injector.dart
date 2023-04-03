@@ -14,17 +14,17 @@ import 'presentation/bookmark/bloc/injection_explore_bloc.dart';
 import 'presentation/explore/bloc/injection_explore_bloc.dart';
 import 'presentation/home/bloc/injection_home_bloc.dart';
 
-//
+// The Injector serves to register all the dependencies of the application
+
+// The GetIt instance is used to register dependencies and retrieve them
 final sl = GetIt.instance;
 
 Future<void> init() async {
-  //! Bloc
+  // Blocs
 
   HomeBlocInjection.init(sl: sl);
   ExploreBlocInjection.init(sl: sl);
   BookmarkBlocInjection.init(sl: sl);
-
-  //! Domain
 
   /// Repositories
   sl.registerLazySingleton<NewsRepository>(
@@ -50,8 +50,6 @@ Future<void> init() async {
   sl.registerLazySingleton(() => AddBookmarkCase(sl()));
   sl.registerLazySingleton(() => GetBookmarkCase(sl()));
   sl.registerLazySingleton(() => RemoveBookmarkCase(sl()));
-
-  //! Data
 
   /// Datasources
   sl.registerLazySingleton<NewsRemoteDataSource>(

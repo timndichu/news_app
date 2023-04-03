@@ -8,16 +8,19 @@ import '../enum_explore_bloc.dart';
 part 'explore_news_event.dart';
 part 'explore_news_state.dart';
 
+// This is the bloc for the explore news
 class ExploreNewsBloc extends Bloc<ExploreNewsEvent, ExploreNewsState> {
   final SearchNewsCase searchCase;
   ExploreNewsBloc({
     required this.searchCase,
   }) : super(const ExploreNewsState()) {
+    // This is the listener for the event
     on<ExploreNewsEvent>((event, emit) {});
     on<ExploreSearchNews>(_onExploreSearchNews);
     on<ExploreSearchNewsMore>(_onExploreSearchNewsMore);
   }
 
+  // This is the listener for the event ExploreSearchNews
   void _onExploreSearchNews(
       ExploreSearchNews event, Emitter<ExploreNewsState> emit) async {
     emit(state.copyWith(status: ExploreBlocStatus.loading));
@@ -57,6 +60,7 @@ class ExploreNewsBloc extends Bloc<ExploreNewsEvent, ExploreNewsState> {
     return;
   }
 
+  // This is the listener for the event ExploreSearchNewsMore
   void _onExploreSearchNewsMore(
       ExploreSearchNewsMore event, Emitter<ExploreNewsState> emit) async {
     if (state.hasReachedMax) return;

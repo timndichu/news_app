@@ -1,5 +1,6 @@
 part of 'explore_news_bloc.dart';
 
+// This is the state for the explore news
 class ExploreNewsState extends Equatable {
   final ExploreBlocStatus status;
   final NewsEntities? response;
@@ -22,6 +23,7 @@ class ExploreNewsState extends Equatable {
     this.keyword = "indonesia",
   });
 
+  // This is the copyWith for the state: It will copy the state and change the value
   ExploreNewsState copyWith({
     ExploreBlocStatus? status,
     NewsEntities? response,
