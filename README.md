@@ -10,4 +10,30 @@ The State Management used is Flutter Bloc With Clean Architecture Pattern
 ## Screenshots
 ![App Screenshot](https://raw.githubusercontent.com/timndichu/news_app/master/lib/src/screenshoot/app_screenshoot.png)
 
+## Git Hooks
 
+make components are re-useable as possible and commit frequently.
+git commits should have a subject and phrase description of your work.
+your commits should look like the example.
+
+```bash
+git commit -m "docs: add readme docs"
+```
+
+all avalable subjects are included below:
+
+- build: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+- ci: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
+- docs: documentation only changes
+- chore: working on cleanups and random changes
+- feat: A new feature
+- fix: A bug fix
+  -wip : work in progress
+  -develop : routing and architecture
+- perf: A code change that improves performance
+- refactor: A code change that neither fixes a bug nor adds a feature
+- revert: A code change that reverts to a previous feature
+- translation: A code change translates to a modified form
+- style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- security: code to improve app security
+- test: Adding missing tests or correcting existing tests
