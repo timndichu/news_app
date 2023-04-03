@@ -10,9 +10,9 @@ import 'src/injector.dart';
 import 'src/presentation/home/bloc/theme/theme_mode_bloc.dart';
 
 void main() async {
-  await init();
+  await init(); // init the injector
 
-  runApp(const MyApp());
+  runApp(const MyApp()); // run the app
 }
 
 class MyApp extends StatelessWidget {
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         builder: (_, state) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            title: 'Flutter Demo',
+            title: 'NdichuNews',
             theme: ligthTheme,
             darkTheme: darkTheme,
             themeMode: state.isDarkMode ? ThemeMode.dark : ThemeMode.light,
