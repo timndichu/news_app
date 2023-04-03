@@ -81,8 +81,10 @@ class BookmarkLocalDataSourceImpl implements BookmarkLocalDataSource {
   Future<NewsModel> readBookmark() async {
     final jsonString = await storage.read(CACHED_BOOKMARK);
     if (jsonString != null) {
+      print('------------------reading bookmarks success--------------');
       return NewsModel.fromJson(json.decode(jsonString));
     } else {
+      print('------------------error in reading bookmarks--------------');
       throw CacheException();
     }
   }

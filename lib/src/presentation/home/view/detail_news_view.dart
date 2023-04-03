@@ -19,9 +19,7 @@ class DetailNewsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: BlocListener<BookmarkNewsBloc, BookmarkNewsState>(
-        listener: (_, state) {
-          
-        },
+        listener: (_, state) {},
         child: CustomScrollView(
           slivers: [
             SliverAppBar(
@@ -50,9 +48,13 @@ class DetailNewsView extends StatelessWidget {
               ),
               actions: [
                 IconButton(
-                  onPressed: () => context
-                      .read<BookmarkNewsBloc>()
-                      .add(BookmarkNewsAddEvent(add: response)),
+                  onPressed: () {
+                    print("Bookmark pressed");
+                    print('response: $response');
+                    context
+                        .read<BookmarkNewsBloc>()
+                        .add(BookmarkNewsAddEvent(add: response));
+                  },
                   icon: Icon(
                     Icons.bookmark_add,
                     color: Guide.isDark(context) ? colorPrimary : colorPrimary,

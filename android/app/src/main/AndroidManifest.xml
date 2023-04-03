@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.norkus.news.news_app">
+    package="com.timndichu.news.news_app">
    <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="news_app"
+        android:label="NdichuNews App"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity
