@@ -35,7 +35,7 @@ class NewsRemoteDataSourceImpl implements NewsRemoteDataSource {
     if (isHeadlines) {
       final response = await http.method(
         path:
-            "top-headlines?language=$language&category=$category&q=$query&pageSize=$limit&page=$page&apiKey=$key",
+            "top-headlines?country=us&language=$language&category=$category&q=$query&pageSize=$limit&page=$page&apiKey=$key",
         methodType: MethodType.get,
       );
 
