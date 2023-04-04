@@ -37,3 +37,12 @@ all avalable subjects are included below:
 - style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
 - security: code to improve app security
 - test: Adding missing tests or correcting existing tests
+
+## Running The App
+To run the flutter app, you need to have flutter installed on your machine. You can find the installation instructions here: https://flutter.dev/docs/get-started/install
+
+After installing flutter, you can run the app by running the following command in the root directory of the project.
+
+```bash
+flutter run
+```
