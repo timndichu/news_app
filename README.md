@@ -46,3 +46,13 @@ After installing flutter, you can run the app by running the following command i
 ```bash
 flutter run
 ```
+
+## APK Installation
+You can download the apk from the apk section of the repository here: [apk files](./apk)
+
+### Don't know what apk file to download?
+Download Droid Info app from Google Play Store from the link below: [Droid info](https://play.google.com/store/apps/details?id=com.inkwired.droidinfo)
+
+After installing the app, click on the system tab. You will see the architecture of your device.
+
+Download the apk file that matches your device architecture (In the system tab, look under PROCESSOR and see what your "Instruction Sets" is. (It should be either arm64-v8a or armeabi-v7a))
